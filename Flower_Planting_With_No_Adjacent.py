@@ -10,8 +10,6 @@ class Solution:
             garden[dst].append(src)
         for i in range(1, n + 1):
             colors = {1, 2, 3, 4}
-            for neigh in garden[i]:
-                if flowers[neigh - 1] in colors:
-                    colors.remove(flowers[neigh - 1])
+            var = {colors.remove(flowers[neigh - 1]) for neigh in garden[i] if flowers[neigh - 1] in colors}
             flowers[i - 1] = colors.pop()
         return flowers
