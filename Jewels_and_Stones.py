@@ -1,3 +1,6 @@
+def numJewelsInStones(jewels: str, stones: str) -> int:
+    return sum(map(stones.count, list(jewels)))
+
+
 class Solution:
-    def numJewelsInStones(self, jewels: str, stones: str) -> int:
-        return sum(map(stones.count, list(jewels)))
+    pass

@@ -1,10 +1,10 @@
 from collections import defaultdict
 
 
-def rec_indices(col, indices):
+def rec_indices(col, indices_val):
     for element in enumerate(col):
-        print(indices[element[0]])
-        indices[element[0]] = element
+        print(indices_val[element[0]])
+        indices_val[element[0]] = element
 
 
 names = ['p', 's', 'b', 'k']
@@ -12,7 +12,7 @@ indices = defaultdict(lambda: 0)
 
 rec_indices(names, indices)
 
-a = ''.join([1, 2, 3, 4, 5, 6, 7])
+a = ''.join(['1', '2', '3', '4', '5', '6', '7'])
 
 print(a)
 
@@ -28,4 +28,4 @@ class Mc:
 
 
 my_cool = Mc(elo=1200)
-my_s_cool = Mc(name='Myname')
+my_s_cool = Mc(name='Name')
