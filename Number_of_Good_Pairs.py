@@ -1,4 +1,6 @@
 from collections import Counter
+from typing import List
+
 
 def numIdenticalPairs(self, nums: List[int]) -> int:
     return sum(num * (num - 1) for num in Counter(nums).values() if num > 1) // 2
