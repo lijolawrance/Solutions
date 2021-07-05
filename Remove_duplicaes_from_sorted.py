@@ -1,4 +1,13 @@
+from typing import List
+
+
+def removeDuplicates(nums: List[int]) -> int:
+    nums[:] = sorted(list(set(nums)))
+    return len(nums)
+
+
 class Solution:
-    def removeDuplicates(self, nums: list[int]) -> int:
-        nums[:] = sorted(list(set(nums)))
-        return len(nums)
+    pass
+
+
+
