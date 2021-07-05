@@ -1,10 +1,18 @@
 import numpy as np
+from typing import List
+
+from numpy import ndarray
+
+
+def findMedianSortedArrays(nums1: List[int], nums2: List[int]) -> ndarray:
+    np1 = np.array(nums1)
+    np2 = np.array(nums2)
+    np3 = np.concatenate((np1, np2))
+    return np.median(np3)
+
+
 class Solution:
-    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
-        np1 = np.array(nums1)
-        np2 = np.array(nums2)
-        np3 = np.concatenate((np1, np2))
-        return np.median(np3)
+    pass
 '''import statistics
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
