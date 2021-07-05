@@ -1,12 +1,10 @@
+def is_palindrome(x: int) -> bool:
+    return str(x) == str(x)[::-1]
+
+
 class Solution:
-    def is_palindrome(self, x: int) -> bool:
-        return str(x) == str(x)[::-1]
-        '''lst = list(str(x))
-        if lst == lst[::-1]:
-            return True
-        else:
-            return False'''
+    pass
 
 
-strv = Solution().is_palindrome(11)
-print(strv)
+str_v = is_palindrome(11)
+print(str_v)
