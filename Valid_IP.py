@@ -1,4 +1,4 @@
-def validIPAddress( IP: str) -> str:
+def validIPAddress(IP: str) -> str:
     def isIPv4(s):
         try:
             return str(int(s)) == s and 0 <= int(s) <= 255
@@ -18,6 +18,7 @@ def validIPAddress( IP: str) -> str:
     if IP.count(":") == 7 and all(isIPv6(i) for i in IP.split(":")):
         return "IPv6"
     return "Neither"
+
 
 print(validIPAddress("172.16.254.1"))
 
