@@ -3,5 +3,8 @@
     <driver id="sqlserver.ms">
       <artifact id="SQL Server" name="SQL Server" use="true" version="9.2.0" />
     </driver>
+    <driver id="sqlite.xerial">
+      <artifact id="Xerial SQLiteJDBC" name="Xerial SQLiteJDBC" use="true" version="3.34.0" />
+    </driver>
   </component>
 </application>
