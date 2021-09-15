@@ -3,7 +3,7 @@ import collections
 from typing import List
 
 
-def maxSlidingWindow(nums: List[int], k: int) -> List[int]:
+def maxSlidingWindow_1(nums: List[int], k: int) -> List[int]:
     double_ended = collections.deque(nums)
     max_list = []
     while len(double_ended) >= k:
@@ -16,8 +16,27 @@ def maxSlidingWindow(nums: List[int], k: int) -> List[int]:
     return max_list
 
 
+def maxSlidingWindow_2(nums: List[int], k: int) -> List[int]:
+    q, res = collections.deque(), []
+    for i in range(len(nums)):
+        if i - k >= 0:
+            res.append(nums[q[0]])
+            while q and q[0] <= i - k:
+                q.popleft()
+        while q and nums[i] > nums[q[-1]]:
+            q.pop()
+        q.append(i)
+    res.append(nums[q[0]])
+    return res
+
+
+def maxSlidingWindow_3(nums: List[int], k: int) -> List[int]:
+    return nums and [max(nums[i:i + k]) for i in range(len(nums) - k + 1)]
+
+
 class Solution:
     pass
+
 
 '''class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
