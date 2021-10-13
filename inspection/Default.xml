@@ -20,6 +20,7 @@
     <option name="ignoredIdentifiers">
       <list>
         <option value="itertools.permutations" />
+        <option value="google.appengine" />
       </list>
     </option>
   </inspection_tool>
